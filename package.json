@@ -1,33 +1,40 @@
 {
-  "name": "shizukani-search",
-  "displayName": "Shizukani Search",
-  "version": "0.0.1",
-  "description": "XのユーザーIDからしずかなインターネットのアカウントを検索するChrome拡張",
-  "author": "",
-  "scripts": {
-    "dev": "plasmo dev",
-    "build": "plasmo build",
-    "package": "plasmo package"
-  },
-  "dependencies": {
-    "jaro-winkler": "^0.2.8",
-    "plasmo": "^0.90.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "@types/chrome": "0.0.260",
-    "@types/jaro-winkler": "^0.2.3",
-    "@types/node": "20.11.16",
-    "@types/react": "18.2.51",
-    "@types/react-dom": "18.2.18",
-    "typescript": "5.3.3"
-  },
-  "manifest": {
-    "host_permissions": [
-      "https://twitter.com/*",
-      "https://x.com/*",
-      "https://sizu.me/*"
-    ]
-  }
+    "name": "shizukani-search",
+    "displayName": "Shizukani Search",
+    "version": "0.0.1",
+    "description": "XのユーザーIDからしずかなインターネットのアカウントを検索するChrome拡張",
+    "author": "",
+    "scripts": {
+        "dev": "plasmo dev",
+        "build": "plasmo build",
+        "package": "plasmo package",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "dependencies": {
+        "jaro-winkler": "^0.2.8",
+        "plasmo": "^0.90.5",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@stylistic/eslint-plugin": "^5.8.0",
+        "@types/chrome": "0.0.260",
+        "@types/jaro-winkler": "^0.2.3",
+        "@types/node": "20.11.16",
+        "@types/react": "18.2.51",
+        "@types/react-dom": "18.2.18",
+        "eslint": "^9.39.2",
+        "eslint-define-config": "^2.1.0",
+        "globals": "^17.3.0",
+        "typescript": "5.3.3",
+        "typescript-eslint": "^8.55.0"
+    },
+    "manifest": {
+        "host_permissions": [
+            "https://twitter.com/*",
+            "https://x.com/*",
+            "https://sizu.me/*"
+        ]
+    }
 }
