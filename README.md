@@ -93,6 +93,43 @@ npm run build
 
 コードを変更して `npm run build` を再実行したあとは、`chrome://extensions/` の拡張機能カードにある更新ボタン（丸矢印アイコン）をクリックすると最新のビルドが反映されます。
 
+## Chromeウェブストアへの公開
+
+### 事前準備
+
+- [ ] [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole) のデベロッパーアカウント（初回登録料 $5）
+- [ ] プライバシーポリシーの公開URL（`PRIVACY_POLICY.md` をホスティングする）
+  - GitHub Pages や任意のホスティングサービスに公開し、そのURLを登録する
+- [ ] ストア掲載用スクリーンショット（1280×800 または 640×400）を1〜5枚
+
+### パッケージの作成
+
+```bash
+npm run build
+npm run package
+```
+
+`build/chrome-mv3-prod.zip` が提出用ファイルとして生成されます。
+
+### 提出手順
+
+1. [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole) を開く
+2. 「新しいアイテム」→ `build/chrome-mv3-prod.zip` をアップロード
+3. ストア掲載情報を入力する：
+   - **説明文**（132文字以内の短い説明 + 詳細説明）
+   - **スクリーンショット**（最低1枚）
+   - **カテゴリ**：「ソーシャル＆コミュニケーション」または「仕事効率化」
+   - **プライバシーポリシーURL**（公開済みの `PRIVACY_POLICY.md` のURL）
+   - **パーミッションの理由説明**（`host_permissions` の用途を記載）
+4. 「審査のため送信」をクリック
+
+### パーミッション説明の記載例
+
+| パーミッション | 理由 |
+|---|---|
+| `https://x.com/*` `https://twitter.com/*` | プロフィールページの表示名・ハンドル・プロフィール文を読み取るため |
+| `https://sizu.me/*` | しずかなインターネットのアカウント存在確認（HTTPリクエスト）のため |
+
 ## 参考
 
 - [しずかなインターネット](https://sizu.me)

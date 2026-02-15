@@ -3,7 +3,7 @@
     "displayName": "Shizukani Search",
     "version": "0.0.1",
     "description": "XのユーザーIDからしずかなインターネットのアカウントを検索するChrome拡張",
-    "author": "",
+    "author": "Kanon",
     "packageManager": "npm@11.1.0",
     "engines": {
         "npm": ">=11.0.0"
@@ -49,6 +49,7 @@
         "npm": "11.1.0"
     },
     "manifest": {
+        "minimum_chrome_version": "109",
         "host_permissions": [
             "https://twitter.com/*",
             "https://x.com/*",
