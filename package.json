@@ -9,7 +9,10 @@
         "build": "plasmo build",
         "package": "plasmo package",
         "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
+        "lint:fix": "eslint . --fix",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:coverage": "vitest run --coverage"
     },
     "dependencies": {
         "jaro-winkler": "^0.2.8",
@@ -24,11 +27,14 @@
         "@types/node": "20.11.16",
         "@types/react": "18.2.51",
         "@types/react-dom": "18.2.18",
+        "@vitest/coverage-v8": "^4.0.18",
         "eslint": "^9.39.2",
         "eslint-define-config": "^2.1.0",
         "globals": "^17.3.0",
+        "happy-dom": "^20.6.1",
         "typescript": "5.3.3",
-        "typescript-eslint": "^8.55.0"
+        "typescript-eslint": "^8.55.0",
+        "vitest": "^4.0.18"
     },
     "manifest": {
         "host_permissions": [
