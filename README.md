@@ -45,8 +45,16 @@ shizukani-search/
 
 ### 必要な環境
 
-- Node.js 18以上
-- npm
+- [Volta](https://volta.sh/) — Node.jsバージョン管理ツール（推奨）
+
+Voltaを使用する場合、`package.json` に Node.js と npm のバージョンがpinされているため、初回のみVolta本体をインストールするだけで自動的に正しいバージョンが使われます。
+
+```bash
+# Volta のインストール（初回のみ）
+curl https://get.volta.sh | bash
+```
+
+Voltaを使わない場合は Node.js `22.21.1`、npm `11.1.0` を別途用意してください。
 
 ### セットアップ
 

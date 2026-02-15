@@ -4,7 +4,12 @@
     "version": "0.0.1",
     "description": "XのユーザーIDからしずかなインターネットのアカウントを検索するChrome拡張",
     "author": "",
+    "packageManager": "npm@11.1.0",
+    "engines": {
+        "npm": ">=11.0.0"
+    },
     "scripts": {
+        "preinstall": "node -e \"const a=process.env.npm_execpath||'';if(!a.includes('npm')){console.error('\\nError: Use npm to install dependencies.\\n');process.exit(1)}\"",
         "dev": "plasmo dev",
         "build": "plasmo build",
         "package": "plasmo package",
@@ -38,6 +43,10 @@
         "typescript": "5.3.3",
         "typescript-eslint": "^8.55.0",
         "vitest": "^4.0.18"
+    },
+    "volta": {
+        "node": "22.21.1",
+        "npm": "11.1.0"
     },
     "manifest": {
         "host_permissions": [
