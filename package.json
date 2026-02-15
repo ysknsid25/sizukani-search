@@ -1,0 +1,33 @@
+{
+  "name": "shizukani-search",
+  "displayName": "Shizukani Search",
+  "version": "0.0.1",
+  "description": "XのユーザーIDからしずかなインターネットのアカウントを検索するChrome拡張",
+  "author": "",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
+  },
+  "dependencies": {
+    "jaro-winkler": "^0.2.8",
+    "plasmo": "^0.90.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.260",
+    "@types/jaro-winkler": "^0.2.3",
+    "@types/node": "20.11.16",
+    "@types/react": "18.2.51",
+    "@types/react-dom": "18.2.18",
+    "typescript": "5.3.3"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://twitter.com/*",
+      "https://x.com/*",
+      "https://sizu.me/*"
+    ]
+  }
+}

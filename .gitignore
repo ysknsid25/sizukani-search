@@ -1,0 +1,4 @@
+node_modules
+.gitmodules
+build
+.plasmo

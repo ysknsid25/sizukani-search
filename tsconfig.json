@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2021", "DOM"],
+    "module": "ESNext",
+    "target": "ES2021",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "paths": {
+      "~*": ["./src/*"]
+    },
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules"],
+  "include": [".plasmo/index.d.ts", "./**/*.ts", "./**/*.tsx"]
+}
